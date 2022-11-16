@@ -1,6 +1,4 @@
-import math
-
-qfa = str(input("Type one of the following: cal, n\n"))
+qfa = str(input("Type one of the following: dob cal, cal, n\n"))
 
 
 if qfa == "n":
@@ -45,3 +43,16 @@ elif qfa == "cal":
         print("The remainder of this devision problem is\n" + str(sum))
     else:
         print("Enter something valid")
+
+elif qfa == "dob cal":
+    age = int(input())
+    dob = 2022 - age
+    agea = dob - 1
+    if age >= 2022:
+        print("Error enter a number less than 2022")
+    elif age < 2022:
+        print("The year you were born was\n" + str(dob) + "-" + str(dob - 1))
+    else:
+        print("Enter a number")
+else:
+    print("Enter something valid")
