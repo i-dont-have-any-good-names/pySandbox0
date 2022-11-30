@@ -1,3 +1,5 @@
+from os import system, name
+
 def calculator(option, num1, num2):
     if option == "a":
         print(num1 + num2)
@@ -25,15 +27,18 @@ while running:
                     login = False
                     running = False
                 elif options == "c":
-                    x = str(input("enter a or s or m or d"))
+                    x = str(input("enter a or s or m or d: "))
                     y = int(input("enter your first number: "))
                     z = int(input("enter your second number: "))
                     calculator(option=x, num1=y, num2=z)
                     continue
-        
+                else:
+                    print("enter a valid option")
+                    continue
         else:
             print("invalid password") 
+            print("try again")
             continue
     else:
         print("invalid username")
-
+print("Ended")
