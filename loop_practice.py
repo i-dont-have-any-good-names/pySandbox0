@@ -1,13 +1,13 @@
 from os import system, name
 
 def calculator(option, num1, num2):
-    if option == "a":
+    if option == "1":
         print(num1 + num2)
-    elif option == "s":
+    elif option == "2":
         print(num1 - num2)
-    elif option == "m":
+    elif option == "3":
         print(num1 * num2)
-    elif option == "d":
+    elif option == "4":
         print(num1 / num2)
 
 running = True
@@ -27,7 +27,11 @@ while running:
                     login = False
                     running = False
                 elif options == "c":
-                    x = str(input("enter a or s or m or d: "))
+                    print("1.Add")
+                    print("2.Subtract")
+                    print("3.Multiply")
+                    print("4.Divide")
+                    x = str(input("enter 1/2/3/4: "))
                     y = int(input("enter your first number: "))
                     z = int(input("enter your second number: "))
                     calculator(option=x, num1=y, num2=z)
